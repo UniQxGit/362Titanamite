@@ -24,12 +24,14 @@ public class Opening : MonoBehaviour {
 
     IEnumerator FadeBackground()
     {
-        float acc = 2.0f;
+        float acc = 1.5f;
         Color c;
+
+        yield return new WaitForSeconds(0.5f);
         while (acc > 0.0f)
         {
             c = bgRen.material.color;
-            c.a = acc / 2.0f;
+            c.a = acc / 1.5f;
             bgRen.material.color = c;
             acc -= Time.deltaTime;
             yield return null;
