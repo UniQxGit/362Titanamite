@@ -85,6 +85,6 @@ public class Opening : MonoBehaviour {
 	
 	void LoadLevel(){
         Info.Save();
-		Application.LoadLevel("Test");
+		Application.LoadLevel("MainPage");
 	}
 }
