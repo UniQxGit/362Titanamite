@@ -10,7 +10,34 @@ public class Opening : MonoBehaviour {
     public GameObject errorUsername;
     public GameObject errorPassword;
 
+    public GameObject uiObjects;
+    
+    public Renderer bgRen;
+
+
 	// Use this for initialization
+    void Start()
+    {
+        StartCoroutine("FadeBackground");
+    }
+
+
+    IEnumerator FadeBackground()
+    {
+        float acc = 2.0f;
+        Color c;
+        while (acc > 0.0f)
+        {
+            c = bgRen.material.color;
+            c.a = acc / 2.0f;
+            bgRen.material.color = c;
+            acc -= Time.deltaTime;
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(0.3f);
+        uiObjects.SetActive(true);
+    }
 
     void CheckValue()
     {
