@@ -8,6 +8,8 @@ public class Info : MonoBehaviour {
     public static bool loggedIn;
     public static bool loaded;
 
+    public static string blue;
+
     public static void Init()
     {
         username = "test@gmail.com";

@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4337977883511858}
   - component: {fileID: 212167033587536530}
+  - component: {fileID: 114570440415673388}
   m_Layer: 0
   m_Name: ListItem_top_01
   m_TagString: Untagged
@@ -131,7 +132,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1376397740785216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.19, y: 0, z: 0}
+  m_LocalPosition: {x: -4.19, y: 0, z: -0.5}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 4337977883511858}
@@ -322,6 +323,25 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 1862270976
+--- !u!114 &114570440415673388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1290486126335738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e37497e726622f4db948e59c8f7d634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagRen: {fileID: 212922328006951046}
+  nameText: {fileID: 102201971403583578}
+  timeText: {fileID: 102296438372137374}
+  roomText: {fileID: 102290086792369366}
+  tagColor: {r: 0, g: 0, b: 0, a: 1}
+  name: CPSC 401
+  time: 'Lesson1: 08:00 - 8:45'
+  room: CS 100
 --- !u!212 &212167033587536530
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -377,7 +397,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 20b6954ccaf457a48b22610591dfdf4a, type: 2}
+  - {fileID: 2100000, guid: 73851b99e0e19124e93abd6b025e905b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

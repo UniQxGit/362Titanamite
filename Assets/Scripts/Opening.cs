@@ -10,7 +10,7 @@ public class Opening : MonoBehaviour {
     public GameObject errorUsername;
     public GameObject errorPassword;
 
-    public GameObject uiObjects;
+    public Animator myAnim;
     
     public Renderer bgRen;
 
@@ -28,6 +28,7 @@ public class Opening : MonoBehaviour {
         Color c;
 
         yield return new WaitForSeconds(0.5f);
+        myAnim.SetTrigger("Open");
         while (acc > 0.0f)
         {
             c = bgRen.material.color;
@@ -38,7 +39,25 @@ public class Opening : MonoBehaviour {
         }
 
         yield return new WaitForSeconds(0.3f);
-        uiObjects.SetActive(true);
+        
+    }
+
+    IEnumerator TransitionOut()
+    {
+        float acc = 0.0f;
+        Color c = new Color();
+
+        myAnim.SetTrigger("Close");
+        while (acc < 1.0f)
+        {
+            c = bgRen.material.color;
+            c.a = acc / 1.0f;
+            bgRen.material.color = c;
+            acc += Time.deltaTime;
+            yield return null;
+        }
+
+        LoadLevel();
     }
 
     void CheckValue()
@@ -52,7 +71,7 @@ public class Opening : MonoBehaviour {
             Info.username = username.text;
             Info.password = password.text;
             Info.loggedIn = true;
-            LoadLevel();
+            StartCoroutine("TransitionOut");
         }
         else
         {
@@ -71,7 +90,7 @@ public class Opening : MonoBehaviour {
             if (isValid)
             {
                 Info.loggedIn = true;
-                LoadLevel();
+                StartCoroutine("TransitionOut");
             }
         }
 
