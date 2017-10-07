@@ -10,7 +10,11 @@ public class Opening : MonoBehaviour {
     public GameObject errorUsername;
     public GameObject errorPassword;
 
+<<<<<<< HEAD
     public GameObject uiObjects;
+=======
+    public Animator myAnim;
+>>>>>>> e78b432d4b9470554963661966af13292efcd063
     
     public Renderer bgRen;
 
@@ -24,19 +28,53 @@ public class Opening : MonoBehaviour {
 
     IEnumerator FadeBackground()
     {
+<<<<<<< HEAD
         float acc = 2.0f;
         Color c;
         while (acc > 0.0f)
         {
             c = bgRen.material.color;
             c.a = acc / 2.0f;
+=======
+        float acc = 1.5f;
+        Color c;
+
+        yield return new WaitForSeconds(0.5f);
+        myAnim.SetTrigger("Open");
+        while (acc > 0.0f)
+        {
+            c = bgRen.material.color;
+            c.a = acc / 1.5f;
+>>>>>>> e78b432d4b9470554963661966af13292efcd063
             bgRen.material.color = c;
             acc -= Time.deltaTime;
             yield return null;
         }
 
         yield return new WaitForSeconds(0.3f);
+<<<<<<< HEAD
         uiObjects.SetActive(true);
+=======
+        
+    }
+
+    IEnumerator TransitionOut()
+    {
+        float acc = 0.0f;
+        Color c = new Color();
+
+        myAnim.SetTrigger("Close");
+        while (acc < 1.0f)
+        {
+            c = bgRen.material.color;
+            c.a = acc / 1.0f;
+            bgRen.material.color = c;
+            acc += Time.deltaTime;
+            yield return null;
+        }
+
+        LoadLevel();
+>>>>>>> e78b432d4b9470554963661966af13292efcd063
     }
 
     void CheckValue()
@@ -50,7 +88,11 @@ public class Opening : MonoBehaviour {
             Info.username = username.text;
             Info.password = password.text;
             Info.loggedIn = true;
+<<<<<<< HEAD
             LoadLevel();
+=======
+            StartCoroutine("TransitionOut");
+>>>>>>> e78b432d4b9470554963661966af13292efcd063
         }
         else
         {
@@ -69,7 +111,11 @@ public class Opening : MonoBehaviour {
             if (isValid)
             {
                 Info.loggedIn = true;
+<<<<<<< HEAD
                 LoadLevel();
+=======
+                StartCoroutine("TransitionOut");
+>>>>>>> e78b432d4b9470554963661966af13292efcd063
             }
         }
 
@@ -83,6 +129,10 @@ public class Opening : MonoBehaviour {
 	
 	void LoadLevel(){
         Info.Save();
+<<<<<<< HEAD
 		Application.LoadLevel("Test");
+=======
+		Application.LoadLevel("MainPage");
+>>>>>>> e78b432d4b9470554963661966af13292efcd063
 	}
 }

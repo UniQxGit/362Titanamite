@@ -11,7 +11,11 @@ public class CheckLogin : MonoBehaviour {
 
         if (Info.loggedIn)
         {
+<<<<<<< HEAD
             Application.LoadLevel("Test");
+=======
+            Application.LoadLevel("MainPage");
+>>>>>>> e78b432d4b9470554963661966af13292efcd063
         }
         else
         {
