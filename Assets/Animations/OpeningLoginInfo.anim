@@ -59,6 +59,12 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  m_FloatCurves: []
+=======
+>>>>>>> ed45afee976fea1dadc40d564e608d31ebf0fc73
   m_FloatCurves:
   - curve:
       serializedVersion: 2
@@ -76,6 +82,10 @@ AnimationClip:
     path: UIElements
     classID: 1
     script: {fileID: 0}
+<<<<<<< HEAD
+=======
+>>>>>>> e78b432d4b9470554963661966af13292efcd063
+>>>>>>> ed45afee976fea1dadc40d564e608d31ebf0fc73
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -98,6 +108,11 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed45afee976fea1dadc40d564e608d31ebf0fc73
     - serializedVersion: 2
       path: 379071044
       attribute: 2086281974
@@ -105,6 +120,10 @@ AnimationClip:
       typeID: 1
       customType: 0
       isPPtrCurve: 0
+<<<<<<< HEAD
+=======
+>>>>>>> e78b432d4b9470554963661966af13292efcd063
+>>>>>>> ed45afee976fea1dadc40d564e608d31ebf0fc73
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
@@ -277,6 +296,11 @@ AnimationClip:
     path: 
     classID: 4
     script: {fileID: 0}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed45afee976fea1dadc40d564e608d31ebf0fc73
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -293,6 +317,10 @@ AnimationClip:
     path: UIElements
     classID: 1
     script: {fileID: 0}
+<<<<<<< HEAD
+=======
+>>>>>>> e78b432d4b9470554963661966af13292efcd063
+>>>>>>> ed45afee976fea1dadc40d564e608d31ebf0fc73
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
